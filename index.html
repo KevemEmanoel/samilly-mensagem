@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Samilly ♥</title>
+
+<style>
+:root {
+    --bg: #190912;
+    --panel: #26111d;
+    --wine: #641d35;
+    --pink: #f4c7d5;
+    --gold: #d9b879;
+    --purple: #e9d5ff;
+    --white: #f8e9ed;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--white);
+    font-family: Georgia, serif;
+    overflow: hidden;
+}
+
+#petals {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 18px;
+}
+
+.panel {
+    width: min(790px, 96vw);
+    height: min(620px, 94vh);
+    border: 2px solid var(--gold);
+    background: rgba(38,17,29,.96);
+    text-align: center;
+    padding: 22px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 35px #0008;
+}
+
+.screen {
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.rose {
+    font-size: 76px;
+    line-height: 1.3;
+    filter: drop-shadow(0 0 12px #b84b70);
+}
+
+h1 {
+    color: var(--pink);
+    font-size: clamp(28px, 5vw, 42px);
+    margin: 10px 0;
+}
+
+h2 {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+p {
+    line-height: 1.7;
+}
+
+button {
+    border: 0;
+    border-radius: 3px;
+    background: var(--wine);
+    color: var(--white);
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 26px;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+button:hover {
+    background: #8c3150;
+}
+
+#letterScreen {
+    height: 100%;
+}
+
+#letterScreen h1 {
+    font-size: clamp(22px, 4vw, 30px);
+    margin: 0 0 5px;
+}
+
+.subtitle {
+    color: var(--gold);
+    font-style: italic;
+    margin: 0 0 12px;
+}
+
+.letter {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 8px 16px 20px;
+    scrollbar-color: var(--gold) var(--panel);
+    text-align: center;
+}
+
+.letter p {
+    white-space: pre-line;
+    color: var(--purple);
+    font-size: 17px;
+    line-height: 1.85;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.final-sign {
+    font-size: clamp(28px, 5vw, 40px);
+    color: var(--pink);
+    font-weight: bold;
+}
+
+@media(max-width: 600px) {
+    .panel {
+        padding: 18px 14px;
+        height: 94vh;
+    }
+
+    .letter {
+        padding: 5px;
+    }
+
+    .letter p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="petals"></canvas>
+
+<main>
+<section class="panel">
+
+    <!-- TELA INICIAL -->
+
+    <div id="homeScreen" class="screen active">
+
+        <div class="rose">🌹</div>
+
+        <h2>Para você, Gatinha</h2>
+
+        <h1>Samilly...</h1>
+
+        <p>Preparei uma pequena surpresa para você.</p>
+
+        <button onclick="showScreen('letterScreen')">
+            ABRIR MINHA MENSAGEM ♥
+        </button>
+
+    </div>
+
+    <!-- TELA DA CARTA -->
+
+    <div id="letterScreen" class="screen">
+
+        <h1>Uma mensagem para você ♥</h1>
+
+        <div class="subtitle">
+            Leia com carinho...
+        </div>
+
+        <div class="letter" id="letter">
+
+            <p>Samilly... ♥
+
+Eu queria dedicar um pequeno momento para escrever algo especialmente para você. Talvez eu não consiga expressar tudo exatamente como gostaria, mas espero que consiga transmitir um pouquinho do carinho que coloquei em cada palavra.
+
+Quero que você saiba que é uma pessoa muito especial. Existem pessoas que tornam os nossos dias mais bonitos simplesmente por fazerem parte deles, e eu espero que você nunca duvide do quanto merece receber coisas boas, viver momentos felizes e realizar todos os seus sonhos.
+
+Também quero deixar uma coisa muito clara: você sempre pode contar comigo. Não importa se estiver passando por um dia difícil, se alguma coisa não estiver dando certo ou se simplesmente precisar conversar. Eu estarei aqui para ouvir você, respeitar seus sentimentos e tentar ajudar da maneira que eu conseguir.
+
+Não precisa ter vergonha de pedir ajuda, de falar sobre o que está sentindo ou de demonstrar quando não estiver bem. Você não precisa estar sorrindo o tempo inteiro, nem fingir que está tudo certo quando não estiver. Quero que saiba que também pode contar comigo nos dias mais difíceis, não somente nos momentos felizes.
+
+Talvez eu nem sempre tenha a resposta certa ou saiba exatamente o que fazer, mas pode ter certeza de que vou procurar uma maneira de ajudar dentro das minhas possibilidades. Às vezes, ajudar é encontrar uma solução; em outras, é simplesmente ouvir, acompanhar ou estar presente. E, se eu puder fazer alguma dessas coisas por você, farei com muito carinho.
+
+Desejo que a vida seja gentil com você. Que nunca faltem motivos para sorrir, pessoas sinceras ao seu redor, coragem para enfrentar os desafios e esperança para continuar buscando aquilo que faz seu coração feliz.
+
+Que você consiga realizar seus planos, conquistar seus objetivos e olhar para trás com orgulho de tudo o que superou. E, quando as coisas parecerem difíceis, lembre-se de que você é capaz de muito mais do que imagina.
+
+Nunca deixe de enxergar a beleza que existe em você, nos seus pequenos detalhes, no seu jeito de ser e na maneira única como faz parte da vida das pessoas que gostam de você.
+
+Preparei esta surpresa porque queria oferecer algo diferente, algo que você pudesse guardar e reler quando quisesse. Não é apenas uma mensagem na tela, mas uma forma de dizer que desejo muitas coisas bonitas para você e que pode contar comigo sempre que precisar.
+
+Obrigado por ser você, Samilly. Espero que seu caminho seja cheio de momentos especiais, conquistas, alegrias e motivos para continuar sorrindo.
+
+Com muito carinho, para você, não sei se posso falar te amo, por isso vou dizer te adoro ♥</p>
+
+        </div>
+
+        <button onclick="showScreen('finalScreen')">
+            CONTINUAR
+        </button>
+
+    </div>
+
+    <!-- TELA FINAL -->
+
+    <div id="finalScreen" class="screen">
+
+        <div class="rose">🌹</div>
+
+        <h2>Com muito carinho...</h2>
+
+        <div class="final-sign">
+            ♥ Samilly ♥
+        </div>
+
+        <p>Espero que tenha gostado desta surpresa.</p>
+
+        <p style="color:var(--purple);font-style:italic">
+            Você merece coisas lindas. ♥
+        </p>
+
+    </div>
+
+</section>
+</main>
+
+<script>
+
+function showScreen(id) {
+
+    document.querySelectorAll('.screen').forEach(screen => {
+        screen.classList.remove('active');
+    });
+
+    document.getElementById(id).classList.add('active');
+
+    if (id === 'letterScreen') {
+        document.getElementById('letter').scrollTop = 0;
+    }
+}
+
+const canvas = document.getElementById('petals');
+const ctx = canvas.getContext('2d');
+
+let petals = [];
+
+function resize() {
+
+    canvas.width = innerWidth * devicePixelRatio;
+    canvas.height = innerHeight * devicePixelRatio;
+
+    ctx.setTransform(
+        devicePixelRatio,
+        0,
+        0,
+        devicePixelRatio,
+        0,
+        0
+    );
+
+    petals = Array.from({length: 55}, () => ({
+        x: Math.random() * innerWidth,
+        y: Math.random() * innerHeight,
+        size: 5 + Math.random() * 6,
+        speed: 1 + Math.random() * 2,
+        drift: Math.random() * 1.5 - 0.75,
+        angle: Math.random() * 6.28
+    }));
+}
+
+function animate() {
+
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+
+    for (const p of petals) {
+
+        p.y += p.speed;
+        p.x += p.drift;
+        p.angle += 0.02;
+
+        if (p.y > innerHeight + 15) {
+            p.y = -15;
+            p.x = Math.random() * innerWidth;
+        }
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.angle);
+
+        ctx.fillStyle = 'rgba(168,61,97,.78)';
+
+        ctx.beginPath();
+
+        ctx.ellipse(
+            0, 0,
+            p.size,
+            p.size * 0.55,
+            0,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fill();
+        ctx.restore();
+    }
+
+    requestAnimationFrame(animate);
+}
+
+addEventListener('resize', resize);
+
+resize();
+animate();
+
+</script>
+
+</body>
+</html>
